@@ -13,7 +13,7 @@ import showHelp, { optionCommand as hc } from "./src/showHelp.js";
 const program = new Command();
 
 program
-  .version("1.0.0")
+  .version("1.0.1")
   .description("A CLI tool to apply your VsCode Preferences and Extensions")
   .option(...ic)
   .option(...vc)
