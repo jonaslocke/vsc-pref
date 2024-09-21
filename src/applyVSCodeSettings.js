@@ -80,7 +80,6 @@ const applyVSCodeSettings = async (
   override = false,
   osType = "windows"
 ) => {
-  console.log(url, override, osType);
   try {
     const response = await fetch(url);
 

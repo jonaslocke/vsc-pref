@@ -16,8 +16,7 @@ const program = new Command();
 
 program
   .version("1.0.0")
-  .description("A CLI tool to apply my VsCode preferences")
-  .option("-n, --name <type>", "Say hello to a name")
+  .description("A CLI tool to apply your VsCode Preferences and Extensions")
   .option(...iec)
   .option(...avcsc)
   .parse(process.argv);
@@ -26,15 +25,6 @@ const options = program.opts();
 
 (async () => {
   switch (true) {
-    case Boolean(options.name):
-      console.log(chalk.yellow.bgGreen.bold(" Hello %s! "), options.name);
-      console.error(chalk.bgRedBright.bold(" ❌ Error: bad payload "));
-      console.error(chalk.bgRedBright.bold(" ❌ Error: %s "), 1);
-      console.log(
-        chalk.bgBlueBright.bold(` ${"👓🕶"} ${2} installed successfully! `)
-      );
-      console.log(chalk.bgMagenta.bold(` ✔ ${1} installed `));
-      break;
     case Boolean(options.installExtensions):
       installExtensions(options.installExtensions);
       break;
@@ -66,9 +56,6 @@ const options = program.opts();
         override === "override",
         osType
       );
-      break;
-    default:
-      console.log(chalk.yellow("Hello, world!"));
       break;
   }
 })();
