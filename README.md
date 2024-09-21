@@ -21,9 +21,9 @@ I'm lazy enough to think of something like this, but motivated at the right amou
 * [License](#license)
 
 ## Usage 
-`vsc-pref -i, --installExtensions <url>`
+`npx vsc-pref -i, --installExtensions <url>`
 
-`vsc-pref -v, --applyVsCodeSettings <url>`
+`npx vsc-pref -v, --applyVsCodeSettings <url>`
 
 ## Example
 
