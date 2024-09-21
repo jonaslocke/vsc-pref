@@ -67,9 +67,12 @@ GNU LGPLv3
 
 ## Questions?
 
-<img src="https://avatars.githubusercontent.com/u/55599921?v=4" alt="jonaslocke" width="40%" />
+<img src="https://avatars.githubusercontent.com/u/55599921?v=4" alt="jonaslocke" width="20%" />
 
-For any questions, please contact me with the information below:
+Feel free to reach out if you have any questions or need assistance. You can contact me through the following:
 
-GitHub: [@jonaslocke](https://api.github.com/users/jonaslocke)
+- **GitHub**: [@jonaslocke](https://api.github.com/users/jonaslocke)
+- **LinkedIn**: [Jonas Antunes](https://www.linkedin.com/in/jonas-antunes/)
+
+Let’s connect and make your experience better! 🚀
   
