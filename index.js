@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import chalk from "chalk";
-import { exec } from "child_process";
 import { Command } from "commander";
+import installExtensions from "./src/installExtensions.js";
 
 const program = new Command();
 
@@ -17,62 +17,6 @@ program
 
 const options = program.opts();
 console.log(options);
-
-const installExtensions = (extensions) => {
-  if (!Array.isArray(extensions) || extensions.length < 1) {
-    console.error(chalk.bgRedBright.bold(" ❌ Error: bad payload "));
-    return;
-  }
-
-  let errorCount = 0;
-
-  for (const index in extensions) {
-    const extension = extensions[index];
-    const command = `code --install-extension ${extension}`;
-
-    exec(command, (error, stdout, stderr) => {
-      if (error) {
-        console.error(
-          chalk.bgRedBright.bold(" ❌ Error installing %s: %s"),
-          extension,
-          error.message
-        );
-        return;
-      }
-
-      if (stderr) {
-        errorCount++;
-        console.error(chalk.bgRedBright.bold(" ❌ Error: %s"), stderr);
-        return;
-      }
-
-      console.log(
-        chalk.bgGreenBright.bold("\n ✨✨ Installing Extensions (%s/%s) "),
-        Number(index) + 1,
-        extensions.length
-      );
-
-      console.log(
-        chalk.bgBlueBright.bold(
-          `\n ${
-            index % 2 === 1 ? "👓 " : "🕶 "
-          } ${extension} installed successfully! `
-        )
-      );
-    });
-  }
-
-  const hasErrors = errorCount > 0;
-  const endMessage = hasErrors
-    ? chalk.bgRedBright.bold(
-        ` ❌ ${Number(extensions.length) - errorCount}/${
-          extensions.length
-        } extensions installed successfully! `
-      )
-    : chalk.bgBlueBright.bold(
-        ` ✔ ${extensions.length} extensions installed successfully! `
-      );
-};
 
 const extensions = ["formulahendry.auto-rename-tag", "alefragnani.Bookmarks"];
 
@@ -107,8 +51,3 @@ switch (true) {
     console.log(chalk.yellow("Hello, world!"));
     break;
 }
-
-/**
- * Install a list of VSCode extensions by executing the `code --install-extension` command.
- * @param {string[]} extensions - Array of VSCode extension names to install.
- */
