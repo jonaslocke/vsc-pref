@@ -1,8 +1,9 @@
 # VsC Prefences
 
-  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/jonaslocke/uld-epsilon?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/jonaslocke/uld-epsilon?style=flat&logo=appveyor)
-  
-  Check out the badges hosted by [shields.io](https://shields.io/).
+![chalk](https://img.shields.io/badge/chalk-5.3.0-brightgreen)
+![commander](https://img.shields.io/badge/commander-12.1.0-blue)
+![inquirer](https://img.shields.io/badge/inquirer-11.0.2-orange)
+![node-fetch](https://img.shields.io/badge/node--fetch-3.3.2-yellowgreen)
   
   
   ## Description 
