@@ -1,0 +1,10 @@
+{
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.5,
+  "workbench.colorTheme": "One Dark Pro",
+  "files.autoSave": "afterDelay",
+  "extensions.ignoreRecommendations": true,
+  "editor.tabSize": 4,
+  "editor.wordWrap": "on",
+  "window.zoomLevel": 0
+}
