@@ -21,9 +21,16 @@ I'm lazy enough to think of something like this, but motivated at the right amou
 * [License](#license)
 
 ## Usage 
-`npx vsc-pref -i, --installExtensions <url>`
+`npx vsc-pref -i <url>`
 
-`npx vsc-pref -v, --applyVsCodeSettings <url>`
+`npx vsc-pref --installExtensions <url>`
+
+
+`npx vsc-pref -v <url>`
+
+`npx vsc-pref --applyVsCodeSettings <url>`
+
+You can always `npx vsc-pref -h` to see all possible commands also.
 
 ## Example
 
@@ -31,7 +38,7 @@ I'm lazy enough to think of something like this, but motivated at the right amou
 
 To install extensions using the CLI tool, you can specify one or more extension IDs in the command. Below is an example of how the input might look in JSON format for installing extensions.
 
-[Example](./examples/extensions.json)
+[Example](https://github.com/jonaslocke/uld-epsilon/blob/main/examples/extensions.json)
 
 ```
 {
@@ -45,7 +52,7 @@ To install extensions using the CLI tool, you can specify one or more extension 
 
 When applying VSCode settings, you will need a JSON file hosted at a remote URL. This JSON file should contain your VSCode settings.
 
-[Example](./examples/settings.json)
+[Example](https://github.com/jonaslocke/uld-epsilon/blob/main/examples/settings.json)
 
 ```
 {

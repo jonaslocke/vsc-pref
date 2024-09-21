@@ -59,5 +59,7 @@ const options = program.opts();
     case Boolean(options.help):
       showHelp();
       break;
+    default:
+      showHelp();
   }
 })();
