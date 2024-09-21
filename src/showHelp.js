@@ -1,6 +1,6 @@
 import chalk from "chalk";
 
-const APPNAME = "uld-epsilon";
+const APPNAME = "vsc-pref";
 
 export const optionCommand = ["-h, --help", "Display help information"];
 
