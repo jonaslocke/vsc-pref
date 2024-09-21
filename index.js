@@ -1,7 +1,12 @@
 #!/usr/bin/env node
 import chalk from "chalk";
 import { Command } from "commander";
-import installExtensions from "./src/installExtensions.js";
+import installExtensions, {
+  optionCommand as iec,
+} from "./src/installExtensions.js";
+import applyVSCodeSettings, {
+  optionCommand as avcsc,
+} from "./src/applyVSCodeSettings.js";
 
 const program = new Command();
 
@@ -12,7 +17,8 @@ program
   .version("1.0.0")
   .description("A CLI tool to apply my VsCode preferences")
   .option("-n, --name <type>", "Say hello to a name")
-  .option("-ie, --installExtensions <type>", "Install VsCode Extensions")
+  .option(...iec)
+  .option(...avcsc)
   .parse(process.argv);
 
 const options = program.opts();
@@ -43,6 +49,9 @@ switch (true) {
     break;
   case Boolean(options.installExtensions):
     installExtensions(options.installExtensions);
+    break;
+  case Boolean(options.applyVsCodeSettings):
+    applyVSCodeSettings(options.applyVsCodeSettings);
     break;
   default:
     console.log(chalk.yellow("Hello, world!"));

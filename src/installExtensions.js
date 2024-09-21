@@ -1,7 +1,12 @@
 import chalk from "chalk";
 import { exec as execCallback } from "child_process";
-import fetch from "node-fetch"; // Use this if you're not on Node.js 18+
+import fetch from "node-fetch";
 import { promisify } from "util";
+
+export const optionCommand = [
+  "-ie, --installExtensions <type>",
+  "Install VsCode Extensions from a remote URL",
+];
 
 const exec = promisify(execCallback);
 
@@ -21,15 +26,16 @@ const exec = promisify(execCallback);
  * The json should look like this:
  * {
  *  "extensionIds": [
- *    "formulahendry.auto-rename-tag", 
+ *    "formulahendry.auto-rename-tag",
  *    "alefragnani.Bookmarks"
  *  ]
  * }
  * installExtensions(url)
  *   .then(() => console.log('All extensions installed'))
  *   .catch((err) => console.error('Error installing extensions:', err));
- * 
+ *
  */
+
 const installExtensions = async (url) => {
   let errorCount = 0;
 
