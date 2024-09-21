@@ -5,22 +5,22 @@ const FONT_COLOR = "#7AA2F7";
 import chalk from "chalk";
 import { Command } from "commander";
 import applyVSCodeSettings, {
-  optionCommand as avcsc,
   prompts,
+  optionCommand as vc,
 } from "./src/applyVSCodeSettings.js";
 import installExtensions, {
-  optionCommand as iec,
+  optionCommand as ic,
 } from "./src/installExtensions.js";
-import showHelp from "./src/showHelp.js";
+import showHelp, { optionCommand as hc } from "./src/showHelp.js";
 
 const program = new Command();
 
 program
   .version("1.0.0")
   .description("A CLI tool to apply your VsCode Preferences and Extensions")
-  .option(...iec)
-  .option(...avcsc)
-  .option("-h, --help", "Display help information")
+  .option(...ic)
+  .option(...vc)
+  .option(...hc)
   .parse(process.argv);
 
 const options = program.opts();

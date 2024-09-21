@@ -2,6 +2,8 @@ import chalk from "chalk";
 
 const APPNAME = "uld-epsilon";
 
+export const optionCommand = ["-h, --help", "Display help information"];
+
 const showHelp = () => {
   console.log(chalk.bgBlueBright(`\n Usage: %s [options] \n`), APPNAME);
   console.log(chalk.bgGreen(" Options: "));
