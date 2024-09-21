@@ -11,6 +11,7 @@ import applyVSCodeSettings, {
 import installExtensions, {
   optionCommand as iec,
 } from "./src/installExtensions.js";
+import showHelp from "./src/showHelp.js";
 
 const program = new Command();
 
@@ -19,6 +20,7 @@ program
   .description("A CLI tool to apply your VsCode Preferences and Extensions")
   .option(...iec)
   .option(...avcsc)
+  .option("-h, --help", "Display help information")
   .parse(process.argv);
 
 const options = program.opts();
@@ -56,6 +58,9 @@ const options = program.opts();
         override === "override",
         osType
       );
+      break;
+    case Boolean(options.help):
+      showHelp();
       break;
   }
 })();

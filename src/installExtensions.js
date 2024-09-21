@@ -4,7 +4,7 @@ import fetch from "node-fetch";
 import { promisify } from "util";
 
 export const optionCommand = [
-  "-ie, --installExtensions <type>",
+  "-i, --installExtensions <type>",
   "Install VsCode Extensions from a remote URL",
 ];
 

@@ -6,7 +6,7 @@ import os from "os";
 import path from "path";
 
 export const optionCommand = [
-  "-avcs, --applyVsCodeSettings <type>",
+  "-v, --applyVsCodeSettings <type>",
   "Apply VsCode Settings from a remote URL",
 ];
 
