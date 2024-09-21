@@ -33,12 +33,12 @@ To install extensions using the CLI tool, you can specify one or more extension 
 [Example](./examples/extensions.json)
 
 `
-    {
-        "extensions": [
-            "formulahendry.auto-rename-tag",
-            "alefragnani.Bookmarks"
-        ]
-    }
+{
+    "extensions": [
+        "formulahendry.auto-rename-tag",
+        "alefragnani.Bookmarks"
+    ]
+}
 `
 #### Apply VSCode Settings
 
@@ -47,16 +47,16 @@ When applying VSCode settings, you will need a JSON file hosted at a remote URL.
 [Example](./examples/settings.json)
 
 `
-    {
-        "editor.fontSize": 14,
-        "editor.lineHeight": 1.5,
-        "workbench.colorTheme": "One Dark Pro",
-        "files.autoSave": "afterDelay",
-        "extensions.ignoreRecommendations": true,
-        "editor.tabSize": 4,
-        "editor.wordWrap": "on",
-        "window.zoomLevel": 0
-    }
+{
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.5,
+    "workbench.colorTheme": "One Dark Pro",
+    "files.autoSave": "afterDelay",
+    "extensions.ignoreRecommendations": true,
+    "editor.tabSize": 4,
+    "editor.wordWrap": "on",
+    "window.zoomLevel": 0
+}
 `
   
 ## License
