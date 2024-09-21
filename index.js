@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-const BACKGROUND_COLOR = "#BB9AF7";
-const FONT_COLOR = "#7AA2F7";
-
 import chalk from "chalk";
 import { Command } from "commander";
 import applyVSCodeSettings, {

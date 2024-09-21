@@ -2,7 +2,7 @@
   "name": "uld-epsilon",
   "version": "1.0.0",
   "type": "module",
-  "description": "A CLI tool to apply your VsCode Preferences and Extensions",
+  "description": "A CLI tool to apply your VsCode Preferences and Extensions from remote URLs",
   "bin": {
     "uld-epsilon": "./index.js"
   },
