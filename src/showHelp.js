@@ -21,12 +21,14 @@ const showHelp = () => {
   console.log(chalk.bgBlueBright("\n Examples: "));
   console.log(
     chalk.white(
-      "\n  %s --installExtensions https://example.com/extensions.json"
+      "\n npx %s --installExtensions https://example.com/extensions.json"
     ),
     APPNAME
   );
   console.log(
-    chalk.white("  %s --applyVsCodeSettings https://example.com/settings.json"),
+    chalk.white(
+      " npx %s --applyVsCodeSettings https://example.com/settings.json"
+    ),
     APPNAME
   );
   console.log(chalk.bgBlueBright("\nThank you for using %s tool!"), APPNAME);
