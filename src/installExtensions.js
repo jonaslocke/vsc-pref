@@ -100,7 +100,7 @@ const installExtensions = async (url) => {
 
     console.log(endMessage);
   } catch (error) {
-    console.error(chalk.bgRedBright.bold("\n ❌ Error: %s"), error.message);
+    console.error(chalk.bgRedBright.bold("\n ❌ Error: %s "), error.message);
   }
 };
 

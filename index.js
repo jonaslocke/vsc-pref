@@ -16,9 +16,6 @@ program
   .parse(process.argv);
 
 const options = program.opts();
-console.log(options);
-
-const extensions = ["formulahendry.auto-rename-tag", "alefragnani.Bookmarks"];
 
 /*
 	readonly black: this;
@@ -45,7 +42,7 @@ switch (true) {
 
     break;
   case Boolean(options.installExtensions):
-    installExtensions(extensions);
+    installExtensions(options.installExtensions);
     break;
   default:
     console.log(chalk.yellow("Hello, world!"));
