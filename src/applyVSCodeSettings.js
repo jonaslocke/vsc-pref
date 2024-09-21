@@ -1,5 +1,6 @@
 import chalk from "chalk";
 import fs from "fs/promises";
+import inquirer from "inquirer";
 import fetch from "node-fetch";
 import os from "os";
 import path from "path";
@@ -8,6 +9,52 @@ export const optionCommand = [
   "-avcs, --applyVsCodeSettings <type>",
   "Apply VsCode Settings from a remote URL",
 ];
+
+const askForOsType = async () => {
+  const { osType } = await inquirer.prompt([
+    {
+      type: "list",
+      name: "osType",
+      message: chalk.bgBlueBright(" Which OS are you using? "),
+      choices: ["windows", "mac"],
+      default: "windows",
+    },
+  ]);
+  return osType;
+};
+const confirmOverride = async () => {
+  const { override } = await inquirer.prompt([
+    {
+      type: "list",
+      name: "override",
+      message: chalk.bgBlueBright(
+        " How to handle your current settings, override or merge? "
+      ),
+      choices: ["override", "merge"],
+      default: "override",
+    },
+  ]);
+  return override;
+};
+const confirmContinue = async () => {
+  const { confirm } = await inquirer.prompt([
+    {
+      type: "confirm",
+      name: "confirm",
+      message: chalk.blueBright(
+        " Bad formatted 'settings.json' can prevent VsCode from open.\n   Are you sure you want to continue? "
+      ),
+      default: true,
+    },
+  ]);
+  return confirm;
+};
+
+export const prompts = {
+  os: askForOsType,
+  override: confirmOverride,
+  continue: confirmContinue,
+};
 
 /**
  * Fetches a remote `settings.json` file from a given URL and applies it to the
@@ -33,6 +80,7 @@ const applyVSCodeSettings = async (
   override = false,
   osType = "windows"
 ) => {
+  console.log(url, override, osType);
   try {
     const response = await fetch(url);
 
