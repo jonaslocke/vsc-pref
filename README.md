@@ -32,21 +32,21 @@ To install extensions using the CLI tool, you can specify one or more extension 
 
 [Example](./examples/extensions.json)
 
-`
+```
 {
     "extensions": [
         "formulahendry.auto-rename-tag",
         "alefragnani.Bookmarks"
     ]
 }
-`
+```
 #### Apply VSCode Settings
 
 When applying VSCode settings, you will need a JSON file hosted at a remote URL. This JSON file should contain your VSCode settings.
 
 [Example](./examples/settings.json)
 
-`
+```
 {
     "editor.fontSize": 14,
     "editor.lineHeight": 1.5,
@@ -57,7 +57,7 @@ When applying VSCode settings, you will need a JSON file hosted at a remote URL.
     "editor.wordWrap": "on",
     "window.zoomLevel": 0
 }
-`
+```
   
 ## License
 
